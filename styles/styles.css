@@ -1,0 +1,40 @@
+/* SECTION 3- ENTERTAINMENT STYLES */
+.entertainment-tile:first-of-type {
+    background: url(../images/rihanna-pregnant.webp);
+    background-size: contain;
+    width:200px;
+    height:200px;
+    background-repeat: no-repeat;
+}
+
+.entertainment-tile:nth-of-type(2){
+    background: url(../images/paris-fashion.jpg);
+    background-size: contain;
+    width:200px;
+    height:200px;
+    background-repeat: no-repeat;
+}
+
+.entertainment-tile:nth-of-type(3){
+    background: url(../images/selena-hailey.webp);
+    background-size: contain;
+    width:200px;
+    height:200px;
+    background-repeat: no-repeat;
+}
+
+.entertainment-tile span:nth-child(even){
+    background: url(../images/et-canada-logo.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 43.75em) {
+    .section3{
+        display:grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* FOOTER STYLES */
