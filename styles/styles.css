@@ -1,11 +1,11 @@
 /* SECTION 3- ENTERTAINMENT STYLES */
 
 .entertainment-tile:first-of-type {
-    background: url(../images/rihanna-pregnant.webp);
-    background-size: contain;
+    background: url(../images/rihanna-pregnant.webp) 50% 50% no-repeat;
     width:200px;
     height:200px;
-    background-repeat: no-repeat;
+    background-size: 400px;
+    border-radius: 1rem;
 }
 
 .entertainment-tile:nth-of-type(2){
@@ -14,20 +14,28 @@
     width:200px;
     height:200px;
     background-repeat: no-repeat;
+    border-radius: 1rem;
 }
 
 .entertainment-tile:nth-of-type(3){
-    background: url(../images/selena-hailey.webp);
-    background-size: contain;
+    background: url(../images/selena-hailey.webp) 50% 50% no-repeat;
     width:200px;
     height:200px;
-    background-repeat: no-repeat;
+    background-size: 300px;
+    border-radius: 1rem;
 }
 
 .entertainment-tile span:nth-child(even){
     background: url(../images/et-canada-logo.jpeg);
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.entertainment-tile p {
+    color:white;
+    padding-top:8rem;
+    padding-left: 0.35rem;
 }
 
 @media (min-width: 43.75em) {
@@ -66,5 +74,6 @@
 
 /* FOOTER STYLES */
 footer{
+    padding-top:5rem;
     text-align: center;
 }
