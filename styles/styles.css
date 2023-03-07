@@ -1,8 +1,11 @@
-/* SECTION 3- ENTERTAINMENT STYLES */
+:root{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+/* SECTION 3- ENTERTAINMENT STYLES */
 .entertainment-tile:first-of-type {
     background: url(../images/rihanna-pregnant.webp) 50% 50% no-repeat;
-    width:200px;
+    width:300px;
     height:200px;
     background-size: 400px;
     border-radius: 1rem;
@@ -19,24 +22,47 @@
 
 .entertainment-tile:nth-of-type(3){
     background: url(../images/selena-hailey.webp) 50% 50% no-repeat;
-    width:200px;
+    width:300px;
     height:200px;
     background-size: 300px;
     border-radius: 1rem;
 }
 
-.entertainment-tile span:nth-child(even){
+.entertainment-tile:nth-child(even) span{
     background: url(../images/et-canada-logo.jpeg);
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: 2;
+    border-radius: 0.5rem;
+    width:30px;
+    height:30px;
+    display: inline-block;
 }
 
 .entertainment-tile p {
     color:white;
-    padding-top:8rem;
+    padding-top:7rem;
+    margin-left:1rem; 
     padding-left: 0.35rem;
+    padding-right:0.34rem;
+    font-size: 16px;
+    text-shadow: rgba(52, 47, 52, 0.643) 1px 0 10px;
+    text-decoration: none;
 }
+
+.entertainment-tile:hover{
+    opacity:0.85;
+}
+
+.section3 h2{
+    text-align: center;
+}
+
+.section3 div{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* INTERACTIVE STYLES */
 
 @media (min-width: 43.75em) {
     .section3{
