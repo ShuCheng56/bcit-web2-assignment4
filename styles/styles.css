@@ -1,0 +1,41 @@
+/* -------------------header--------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    /* background-image: linear-gradient(to right, white, #BB2649, white, rgba(255, 255, 0, 0)); */
+    /* border-style: 3px solid; */
+
+    /* border-image: url(border.png) 50 round; */
+}
+
+#logo {
+    margin-left: 2rem;
+}
+
+nav {
+    font-variant: small-caps;
+    
+}
+
+ul {
+    list-style: none;
+}
+
+#navbar li{
+    display: inline-block;
+    border-left-style: solid;
+}
+
+#navbar a {
+    text-decoration: none;
+    margin: 1.5rem;
+    padding: .8rem 1rem .8rem 1rem;
+    color: black;
+    /* outline-style: solid; */
+    outline-color: gold;
+    
+}
+
