@@ -2,13 +2,11 @@
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-family: sans-serif;
-    /* background-image: linear-gradient(to right, white, #BB2649, white, rgba(255, 255, 0, 0)); */
-    /* border-style: 3px solid; */
-
-    /* border-image: url(border.png) 50 round; */
+    border-bottom-style: solid;
+    border-color: #BB2649;
 }
 
 #logo {
@@ -17,7 +15,7 @@ header {
 
 nav {
     font-variant: small-caps;
-    
+    margin-right: 3rem;
 }
 
 ul {
@@ -26,16 +24,23 @@ ul {
 
 #navbar li{
     display: inline-block;
-    border-left-style: solid;
+    cursor: pointer;
+    transition: .2s;
+    height: 100%;
+}
+
+ul:last-child {
+    /* border-right-style: solid; */
 }
 
 #navbar a {
     text-decoration: none;
-    margin: 1.5rem;
-    padding: .8rem 1rem .8rem 1rem;
+    margin: 1rem;
+    padding: .7rem .8rem .625rem .8rem;
     color: black;
-    /* outline-style: solid; */
-    outline-color: gold;
-    
+}
+
+ul li:hover {
+    transform: scale(1.2, 1.3);
 }
 
