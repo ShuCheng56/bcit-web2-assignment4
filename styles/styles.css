@@ -100,11 +100,22 @@
     list-style-type:none;
     display:flex;
     justify-content: center;
+    padding-bottom:1rem;
+    
 }
 
-.footer-nav li{
+.footer-nav li a {
     padding:1rem;
     text-decoration: none;
+}
+
+.footer-nav li {
+    padding:1rem;
+}
+
+.footer-nav li:hover {
+    background-color: white;
+    border-radius: 1rem;
 }
 
 .new-end {
