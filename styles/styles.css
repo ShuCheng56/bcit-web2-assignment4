@@ -8,17 +8,6 @@
     padding-bottom: 2rem;
 }
 
-.entertainment-tile{
-    margin-left:auto;
-    margin-right:auto;
-    
-}
-
-.tile-wrapper{
-    padding-bottom:15rem;
-    display:grid;
-}
-
 /* SECTION 3- ENTERTAINMENT STYLES */
 .entertainment-tile figure{
     position:relative;
@@ -80,8 +69,6 @@
 
 
 
-
-
 /* INTERACTIVE STYLES */
 
 .entertainment-tile:hover{
@@ -89,39 +76,17 @@
     transform: scale(1.1);
 }
 
-@media (min-width: 43.75em) {
-    .tile-wrapper{
-        display:grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: 80px 1fr;
-    }
 
-    .section3 h2{
-        grid-row: 1/2;
-        grid-column: 1/8;
-        text-align: center;
-    }
+/* RESPONSIVENESS */
 
-    .entertainment-tile:first-of-type{
-        grid-row:2/3;
-        grid-column: 3/4;
-        margin:0.5rem;
-    }
-
-    .entertainment-tile:nth-of-type(2){
-        grid-row:2/3;
-        grid-column: 4/5;
-        margin:0.5rem;
-    }
-    
-    .entertainment-tile:nth-of-type(3){
-        grid-row:2/3;
-        grid-column: 5/6;
-        margin:0.5rem;
-    }
-
-
+.tile-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    padding-bottom:15rem;
 }
+
 
 /* FOOTER STYLES */
 .news-end{
@@ -135,8 +100,6 @@
     list-style-type:none;
     display:flex;
     justify-content: center;
-    
-    /* padding-bottom:3rem; */
 }
 
 .footer-nav li{
