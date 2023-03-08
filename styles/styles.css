@@ -2,73 +2,98 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* SECTION 3 - OVERALL STYLES */
+.section3 h2{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.entertainment-tile{
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+
+.tile-wrapper{
+    padding-bottom:15rem;
+    display:grid;
+}
+
 /* SECTION 3- ENTERTAINMENT STYLES */
-.entertainment-tile:first-of-type {
-    background: url(../images/rihanna-pregnant.webp) 50% 50% no-repeat;
+.entertainment-tile figure{
+    position:relative;
+}
+.entertainment-tile:first-of-type img{
     width:300px;
-    height:200px;
-    background-size: 400px;
+    height:300px;
+    object-fit: cover;
+    object-position: 50% 50%;
     border-radius: 1rem;
 }
 
-.entertainment-tile:nth-of-type(2){
-    background: url(../images/paris-fashion.jpg);
-    background-size: contain;
-    width:200px;
-    height:200px;
-    background-repeat: no-repeat;
-    border-radius: 1rem;
+.entertainment-tile figure figcaption {
+    position:absolute; 
+    bottom:0;
+    padding-bottom:3rem;
+    color:white;
+    padding-left: 1rem;
+    width:250px;
+    text-align: right;
+    text-shadow: rgba(52, 47, 52, 0.643) 1px 0 10px;
+    display:flex;
+    align-items: center;
+    
 }
 
-.entertainment-tile:nth-of-type(3){
-    background: url(../images/selena-hailey.webp) 50% 50% no-repeat;
+.entertainment-tile:nth-of-type(2) img {
     width:300px;
-    height:200px;
-    background-size: 300px;
+    height:300px;
+    object-fit: cover;
+    object-position: 50% 50%;
     border-radius: 1rem;
 }
 
-.entertainment-tile:nth-child(even) span{
+.entertainment-tile:nth-of-type(3) img {
+    width:300px;
+    height:300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 1rem;
+}
+.cnn-logo {
+    background: url(../images/cnn-logo.png);
+}
+
+.et-logo {
     background: url(../images/et-canada-logo.jpeg);
+
+}
+.source-logo {
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 0.5rem;
     width:30px;
     height:30px;
     display: inline-block;
+    flex-shrink: 0;
 }
 
-.entertainment-tile p {
-    color:white;
-    padding-top:7rem;
-    margin-left:1rem; 
-    padding-left: 0.35rem;
-    padding-right:0.34rem;
-    font-size: 16px;
-    text-shadow: rgba(52, 47, 52, 0.643) 1px 0 10px;
-    text-decoration: none;
-}
 
-.entertainment-tile:hover{
-    opacity:0.85;
-}
 
-.section3 h2{
-    text-align: center;
-}
 
-.section3 div{
-    margin-left:auto;
-    margin-right:auto;
-}
 
 /* INTERACTIVE STYLES */
 
+.entertainment-tile:hover{
+    opacity:0.85;
+    transform: scale(1.1);
+}
+
 @media (min-width: 43.75em) {
-    .section3{
+    .tile-wrapper{
         display:grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: 50px 1fr;
+        grid-template-rows: 80px 1fr;
     }
 
     .section3 h2{
@@ -80,26 +105,46 @@
     .entertainment-tile:first-of-type{
         grid-row:2/3;
         grid-column: 3/4;
-        margin:1rem;
+        margin:0.5rem;
     }
 
     .entertainment-tile:nth-of-type(2){
         grid-row:2/3;
         grid-column: 4/5;
-        margin:1rem;
+        margin:0.5rem;
     }
     
     .entertainment-tile:nth-of-type(3){
         grid-row:2/3;
         grid-column: 5/6;
-        margin:1rem;
+        margin:0.5rem;
     }
 
 
 }
 
 /* FOOTER STYLES */
-footer{
+.news-end{
     padding-top:5rem;
+    padding-bottom: 5rem;
     text-align: center;
+    background-color: rgba(128, 128, 128, 0.048);  
 }
+
+.footer-nav ul{
+    list-style-type:none;
+    display:flex;
+    justify-content: center;
+    
+    /* padding-bottom:3rem; */
+}
+
+.footer-nav li{
+    padding:1rem;
+    text-decoration: none;
+}
+
+.new-end {
+    padding:2rem;
+}
+
