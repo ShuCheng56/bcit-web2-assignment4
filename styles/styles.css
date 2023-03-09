@@ -7,6 +7,69 @@
     --three-col: 32%;
     --four-col: 23.5%;
 }
+/* -------------------header--------------------- */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    border-bottom-style: solid;
+    border-color: #BB2649;
+}
+
+#logo {
+    margin-left: 2rem;
+}
+
+/* --------------navigation---------------- */
+
+nav {
+    font-variant: small-caps;
+    margin-right: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+#navbar span {
+    font-weight: 500;
+    font-stretch: expanded;
+}
+
+#navbar li{
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s;
+    height: 100%;
+}
+
+#navbar a {
+    text-decoration: none;
+    margin: 1rem;
+    padding: .7rem .8rem .625rem .8rem;
+    color: black;
+}
+
+ul li:hover {
+    transform: scale(1.3, 1.2);
+}
+
+span {
+    /* display: none; */
+}
+
+@media (max-width: 43.75em) {
+
+    #navbar li {
+        display: block;
+    }
+    #navbar span {
+        display: none;
+    }
+
+}
 
 body {
 
