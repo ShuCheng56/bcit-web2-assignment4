@@ -1,3 +1,12 @@
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --heading-color: red;
+    --heading-text-color: white;
+    --one-col: 80%;
+    --two-col: 49%;
+    --three-col: 32%;
+    --four-col: 23.5%;
+}
 /* -------------------header--------------------- */
 
 header {
@@ -60,4 +69,396 @@ span {
         display: none;
     }
 
+}
+
+body {
+
+    color: black;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.breaking-news-heading {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--heading-color);
+    color: var(--heading-text-color);
+    text-align: center;
+    text-decoration: none;
+    padding: .5rem;
+}
+
+.breaking-news-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.breaking-news-section img {
+    width: var(--one-col);
+    margin-left: 4rem;
+
+}
+
+.breaking-news-content {
+    margin: 2rem 1.6rem;
+    font-size: 1.5rem;
+
+}
+
+.sports-section-title {
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.sports-section figure img {
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 2%;
+
+
+}
+
+.sports-section figure:hover img {
+    transform: scale(1.1);
+}
+
+.sports-section article {
+    position: relative;
+}
+
+.sports-section figure figcaption {
+    position: absolute;
+    bottom: 5rem;
+    width: 75%;
+    margin: .5rem;
+    color: var(--heading-text-color);
+    text-shadow: 2px 2px 2px rgba(70, 70, 70, 0.49);
+    font-size: 1.5rem;
+    border: none;
+    text-align: left;
+}
+
+a img,
+a p {
+    text-align: center;
+
+    vertical-align: middle;
+
+
+}
+
+a img {
+    margin-right: 10px
+}
+
+
+
+@media (min-width:47.5em) {
+
+    .breaking-news-heading {
+        width: 50%;
+    }
+
+
+
+    .breaking-news-section article {
+        display: flex;
+        flex-direction: column;
+
+        height: 60%;
+        text-align: center;
+    }
+
+    .breaking-news-section img {
+        width: 100%;
+    }
+
+    .breaking-news-content {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        line-height: 1.6rem;
+        width: 100%;
+        align-items: center;
+
+
+    }
+
+    .breaking-news-content h2 {
+        line-height: 2rem;
+    }
+
+    .breaking-news-content p {
+        text-align: left;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sports-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .sports-section figure img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: transform 0.2s ease-in-out;
+
+    }
+
+    .sports-section figure:hover img {
+        transform: scale(1.1);
+    }
+
+    .sports-section article {
+        position: relative;
+    }
+
+    .sports-section figcaption {
+        position: absolute;
+        bottom: 5rem;
+        color: var(--heading-text-color);
+        text-align: left;
+        width: 75%;
+        font-size: 1.5rem;
+        padding: 10px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        border: none;
+
+
+    }
+
+    a img,
+    a p {
+        display: inline-block;
+        vertical-align: middle;
+
+    }
+
+    a img {
+        margin-right: 10px
+    }
+
+}
+
+
+@media screen and (min-width: 70em) {
+
+
+    .breaking-news-section article {
+        display: flex;
+        flex-direction: row;
+        height: 70%;
+        text-align: center;
+    }
+
+    .breaking-news-section img {
+        width: 100%;
+    }
+
+    .breaking-news-content {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.6rem;
+        width: 70%;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .breaking-news-content h2 {
+        line-height: 3rem;
+    }
+
+    h2~p {
+        text-align: left;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        line-height: 2rem;
+        margin-top: 0;
+    }
+
+    .sports-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .sports-section figure img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: transform 0.2s ease-in-out;
+
+    }
+
+    .sports-section figure:hover img {
+        transform: scale(1.1);
+    }
+
+    .sports-section article {
+        position: relative;
+    }
+
+    .sports-section figcaption {
+        position: absolute;
+        bottom: 5rem;
+        color: var(--heading-text-color);
+        text-align: left;
+        width: 75%;
+        font-size: 1.5rem;
+        padding: 10px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        border: none;
+    }
+
+    a img,
+    a p {
+        display: inline-block;
+        vertical-align: middle;
+
+    }
+
+    a img {
+        margin-right: 10px
+    }
+
+}
+
+
+/* SECTION 3 - OVERALL STYLES */
+.section3 h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/* SECTION 3- ENTERTAINMENT STYLES */
+.entertainment-tile figure {
+    position: relative;
+}
+
+.entertainment-tile:first-of-type img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 1rem;
+}
+
+.entertainment-tile figure figcaption {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 3rem;
+    color: white;
+    padding-left: 1rem;
+    width: 250px;
+    text-align: right;
+    text-shadow: rgba(52, 47, 52, 0.643) 1px 0 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.entertainment-tile:nth-of-type(2) img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 1rem;
+}
+
+.entertainment-tile:nth-of-type(3) img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 1rem;
+}
+
+.cnn-logo {
+    background: url(../images/cnn-logo.png);
+}
+
+.et-logo {
+    background: url(../images/et-canada-logo.jpeg);
+
+}
+
+.source-logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+
+
+/* INTERACTIVE STYLES */
+
+.entertainment-tile:hover {
+    opacity: 0.85;
+    transform: scale(1.1);
+}
+
+
+/* RESPONSIVENESS */
+
+.tile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    padding-bottom: 15rem;
+}
+
+
+/* FOOTER STYLES */
+.news-end {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.048);
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+}
+
+.footer-nav li a {
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.footer-nav li {
+    padding: 1rem;
+}
+
+.footer-nav li:hover {
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.new-end {
+    padding: 2rem;
 }
