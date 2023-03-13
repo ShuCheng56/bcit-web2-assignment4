@@ -12,15 +12,24 @@
 
 <body>
     <header class="header">
-        <!-- <div class="header-left"> -->
-            <img id="logo" src="logo.png" alt="Logo">
+        
+        <div class="header-left" id="header-left">
+            <span class="logo" id="logo"><img id="logoImg" src="images/star-36px.png" alt="Logo"></span>
             <span class="site-title" id="site-title">
                 MZnewS
             </span>
-        <!-- </div> -->
+        </div>
+
+        <div class="header-right" id="header-right">
+        <button class="nav-btn" id="nav-btn">
+            <span class="sr-only" id="sr-only">Menu</span>
+            <span class="bar" id="bar"></span>
+            <span class="bar" id="bar"></span>
+            <span class="bar" id="bar"></span>
+        </button>
 
         <nav id="navbar" class="navbar">
-            <ul>
+            <ul id="nav-list" class="nav-list">
                 <span>|</span><li>
                     <a href="#">Home</a>
                 </li>
@@ -35,6 +44,7 @@
                 </li><span>|</span>
             </ul>
         </nav> 
+        </div>
 
     </header>
 
@@ -183,7 +193,7 @@
             <p>&copy; 2023 | Shu, Zybiah, Michelle | for educational purposes only</p>
         </div>
     </footer>
-
+<script src="scripts/script.js"></script>
 </body>
 
 </html>
