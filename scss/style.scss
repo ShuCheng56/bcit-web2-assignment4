@@ -1,6 +1,7 @@
 :root {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   --heading-color: red;
+  
   --heading-text-color: white;
   --one-col: 80%;
   --two-col: 49%;
@@ -41,6 +42,10 @@ header {
 }
 
 /* --------------navigation---------------- */
+
+a[id~="logo"] {
+  outline-style: none;
+}
 
 .sr-only {
   display: none;
@@ -197,6 +202,11 @@ header {
 body {
   color: black;
 }
+
+p + p{
+  color:red;
+}
+
 
 a {
   text-decoration: none;
