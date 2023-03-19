@@ -6,6 +6,10 @@
   
   /* SECTION 3- ENTERTAINMENT STYLES */
   .entertainment-tile{
+    &:hover {                           /* INTERACTIVE STYLES */
+        opacity: 0.85;
+        transform: scale(1.1);
+      }                                 
     figure {
     position: relative;
     figcaption {
@@ -20,6 +24,7 @@
     display: flex;
     align-items: center;
   }
+  
 }
 img {
     width: 300px;
@@ -46,4 +51,14 @@ img {
     height: 30px;
     display: inline-block;
     flex-shrink: 0;
+  }
+
+  /* RESPONSIVENESS */
+
+.tile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    padding-bottom: 15rem;
   }
