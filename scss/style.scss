@@ -1,3 +1,5 @@
+@use "./entertainment-tile";
+
 :root {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   --heading-color: red;
@@ -443,71 +445,7 @@ a img {
   }
 }
 
-/* SECTION 3 - OVERALL STYLES */
-.section3 h2 {
-  text-align: center;
-  padding-bottom: 2rem;
-}
 
-/* SECTION 3- ENTERTAINMENT STYLES */
-.entertainment-tile figure {
-  position: relative;
-}
-
-.entertainment-tile:first-of-type img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 1rem;
-}
-
-.entertainment-tile figure figcaption {
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 3rem;
-  color: white;
-  padding-left: 1rem;
-  width: 250px;
-  text-align: right;
-  text-shadow: rgba(52, 47, 52, 0.643) 1px 0 10px;
-  display: flex;
-  align-items: center;
-}
-
-.entertainment-tile:nth-of-type(2) img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 1rem;
-}
-
-.entertainment-tile:nth-of-type(3) img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 1rem;
-}
-
-.cnn-logo {
-  background: url(../images/cnn-logo.png);
-}
-
-.et-logo {
-  background: url(../images/et-canada-logo.jpeg);
-}
-
-.source-logo {
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 0.5rem;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  flex-shrink: 0;
-}
 
 /* INTERACTIVE STYLES */
 
