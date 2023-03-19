@@ -1,7 +1,6 @@
 :root {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   --heading-color: red;
-  
   --heading-text-color: white;
   --one-col: 80%;
   --two-col: 49%;
@@ -203,10 +202,9 @@ body {
   color: black;
 }
 
-p + p{
-  color:red;
+p + p {
+  color: red;
 }
-
 
 a {
   text-decoration: none;
