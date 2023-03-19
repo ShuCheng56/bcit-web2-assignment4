@@ -1,0 +1,459 @@
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --two-col: 49%;
+  --three-col: 32%;
+  --four-col: 23.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img,
+a p {
+  text-align: center;
+  vertical-align: middle;
+}
+@media (min-width: 47.5em) {
+  a img,
+  a p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+a img {
+  margin-right: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 70em) {
+  h2 ~ p {
+    text-align: left;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+    margin-top: 0;
+  }
+}
+
+.paragraph, .paragraph--red {
+  font-size: 1.5rem;
+}
+.paragraph--red {
+  color: red;
+}
+
+/* -------------------header----------------- */
+header {
+  border-bottom-style: solid;
+  border-color: #bb2649;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  z-index: 999;
+}
+@media (min-width: 70em) {
+  header {
+    position: static;
+  }
+}
+header .header-left {
+  display: flex;
+}
+header .header-left span {
+  margin-left: 3rem;
+}
+header .header-left .site-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: flex;
+  align-self: center;
+}
+@media (min-width: 70em) {
+  header .header-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* --------------navigation---------------- */
+a[id~=logo] {
+  outline-style: none;
+}
+
+/* --------------navigation---------------- */
+.sr-only {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  font-variant: small-caps;
+  margin-right: 3rem;
+  list-style: none;
+}
+.navbar ul li:hover {
+  transform: scale(1.3, 1.2);
+}
+
+#navbar li {
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.2s;
+  height: 100%;
+}
+#navbar a {
+  text-decoration: none;
+  margin: 1rem;
+  padding: 0.7rem 0.8rem 0.625rem 0.8rem;
+  color: black;
+}
+
+/* -------------------nav button animation---------------- */
+.nav-btn {
+  display: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-style: none;
+  background: none;
+  position: relative;
+  z-index: 1000;
+}
+.nav-btn.active .bar:nth-child(2) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-btn.active .bar:nth-child(3) {
+  opacity: 0;
+}
+.nav-btn.active .bar:nth-child(4) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: rgb(52, 52, 11);
+}
+
+/* ----------------------mobile nav--------------------- */
+@media screen and (max-width: 70em) {
+  .nav-btn {
+    display: block;
+  }
+  #nav-list span {
+    display: none;
+  }
+  #nav-list li {
+    cursor: pointer;
+    height: 100%;
+    transition: 0.4s;
+    background-color: #ffffff;
+    line-height: 1.5rem;
+    display: flex;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  .navbar ul li:hover {
+    transform: none;
+  }
+  .navbar a {
+    padding: 1rem;
+    width: 100%;
+  }
+  .nav-list {
+    position: fixed;
+    right: -110%;
+    top: 0;
+    width: 100vw;
+    padding: 0.5rem;
+    transition: 0.3s;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+  .nav-list.active {
+    right: 0;
+    z-index: 100;
+  }
+  .nav-list li a:hover {
+    background: linear-gradient(to left, rgba(210, 209, 196, 0.597), rgba(0, 128, 0, 0));
+  }
+}
+/* SECTION 3 - OVERALL STYLES */
+.section3 h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* -------------------breaking news----------------- */
+.breaking-news-heading {
+  display: inline-block;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+@media (min-width: 47.5em) {
+  .breaking-news-heading {
+    width: 50%;
+  }
+}
+.breaking-news-section {
+  display: flex;
+  flex-direction: column;
+}
+.breaking-news-section > img {
+  width: 80%;
+  margin-left: 4rem;
+}
+@media (min-width: 47.5em) {
+  .breaking-news-section img {
+    width: 100%;
+  }
+}
+@media (min-width: 47.5em) {
+  .breaking-news-section article {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    text-align: center;
+  }
+}
+@media (min-width: 70em) {
+  .breaking-news-section article {
+    flex-direction: row;
+    height: 70%;
+  }
+}
+.breaking-news-content {
+  margin: 2rem 1.6rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 47.5em) {
+  .breaking-news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 1.6rem;
+    width: 100%;
+    align-items: center;
+  }
+}
+@media (min-width: 70em) {
+  .breaking-news-content {
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+@media (min-width: 47.5em) {
+  .breaking-news-content h2 {
+    line-height: 2rem;
+  }
+}
+@media (min-width: 70em) {
+  .breaking-news-content h2 {
+    line-height: 3rem;
+  }
+}
+@media (min-width: 47.5em) {
+  .breaking-news-content p {
+    text-align: left;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sports-section-title {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+@media (min-width: 47.5em) {
+  .sports-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+}
+@media (min-width: 70em) {
+  .sports-section {
+    flex-direction: row;
+  }
+}
+.sports-section article {
+  position: relative;
+}
+.sports-section figure {
+  margin: 0;
+}
+@media (min-width: 47.5em) {
+  .sports-section figure {
+    margin-inline: 40px;
+  }
+}
+.sports-section figure:hover img {
+  transform: scale(1.1);
+}
+.sports-section figure img {
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 2%;
+}
+@media (min-width: 47.5em) {
+  .sports-section figure img {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+  }
+}
+.sports-section figure figcaption {
+  position: absolute;
+  bottom: 5rem;
+  width: 75%;
+  margin: 0.5rem;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(70, 70, 70, 0.49);
+  font-size: 1.5rem;
+  border: none;
+  text-align: left;
+}
+@media (min-width: 47.5em) {
+  .sports-section figcaption {
+    position: absolute;
+    bottom: 5rem;
+    color: white;
+    text-align: left;
+    width: 75%;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border: none;
+  }
+}
+
+/* SECTION 3- ENTERTAINMENT STYLES */
+.entertainment-tile:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+.entertainment-tile figure {
+  position: relative;
+}
+.entertainment-tile figure figcaption {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 3rem;
+  color: white;
+  padding-left: 1rem;
+  width: 250px;
+  text-align: right;
+  text-shadow: rgba(52, 47, 52, 0.643) 1px 0 10px;
+  display: flex;
+  align-items: center;
+}
+.entertainment-tile img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  border-radius: 1rem;
+}
+
+.cnn-logo {
+  background: url(../images/cnn-logo.png);
+}
+
+.et-logo {
+  background: url(../images/et-canada-logo.jpeg);
+}
+
+.source-logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* RESPONSIVENESS */
+.tile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  padding-bottom: 15rem;
+}
+
+/* FOOTER STYLES */
+.news-end {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.048);
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+@media (min-width: 47.5em) {
+  .footer-nav ul {
+    display: flex;
+  }
+}
+.footer-nav ul li {
+  padding: 1rem;
+}
+.footer-nav ul li a {
+  padding: 1rem;
+  text-decoration: none;
+}
+.footer-nav ul li:hover {
+  background-color: white;
+  border-radius: 1rem;
+}/*# sourceMappingURL=style.css.map */

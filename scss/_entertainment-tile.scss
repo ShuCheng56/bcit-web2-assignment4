@@ -1,0 +1,29 @@
+/* SECTION 3- ENTERTAINMENT STYLES */
+.entertainment-tile {
+  &:hover {
+    opacity: 0.85;
+    transform: scale(1.1);
+  }
+  figure {
+    position: relative;
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 3rem;
+      color: white;
+      padding-left: 1rem;
+      width: 250px;
+      text-align: right;
+      text-shadow: rgba(52, 47, 52, 0.643) 1px 0 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 1rem;
+  }
+}

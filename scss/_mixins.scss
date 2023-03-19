@@ -1,0 +1,7 @@
+@use './variables' as *;
+// mobile-first media query
+@mixin media($mediawidth: $md) {
+  @media (min-width: $mediawidth) {
+    @content;
+  }
+}
