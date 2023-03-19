@@ -1,4 +1,6 @@
-:root {
+@use "variables" as *;
+
+root {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   --heading-color: red;
   --heading-text-color: white;
@@ -202,20 +204,22 @@ body {
   color: black;
 }
 
+//use sass variables
 p + p {
-  color: red;
+  color: $primary;
 }
 
 a {
   text-decoration: none;
 }
 
+// use mixins
 .breaking-news-heading {
+  @include align-center;
   display: inline-block;
   width: 100%;
   background-color: var(--heading-color);
   color: var(--heading-text-color);
-  text-align: center;
   text-decoration: none;
   padding: 0.5rem;
 }
@@ -314,51 +318,102 @@ a img {
     justify-content: center;
     align-items: center;
   }
+}
 
-  .sports-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-  }
+// write ports-section in sass start
 
-  .sports-section figure img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    transition: transform 0.2s ease-in-out;
-  }
+.sports-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
 
-  .sports-section figure:hover img {
-    transform: scale(1.1);
-  }
-
-  .sports-section article {
+  article {
     position: relative;
-  }
 
-  .sports-section figcaption {
-    position: absolute;
-    bottom: 5rem;
-    color: var(--heading-text-color);
-    text-align: left;
-    width: 75%;
-    font-size: 1.5rem;
-    padding: 10px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    border: none;
-  }
+    figure img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.2s ease-in-out;
+    }
 
-  a img,
-  a p {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    figure:hover img {
+      transform: scale(1.1);
+    }
 
-  a img {
-    margin-right: 10px;
+    figcaption {
+      position: absolute;
+      bottom: 5rem;
+      color: var(--heading-text-color);
+      text-align: left;
+      width: 75%;
+      font-size: 1.5rem;
+      padding: 10px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      border: none;
+    }
+
+    a {
+      img,
+      p {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      img {
+        margin-right: 10px;
+      }
+    }
   }
 }
+
+// write ports-section in sass end
+
+//   .sports-section {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     text-align: center;
+//   }
+
+//   .sports-section figure img {
+//     width: 100%;
+//     height: 400px;
+//     object-fit: cover;
+//     transition: transform 0.2s ease-in-out;
+//   }
+
+//   .sports-section figure:hover img {
+//     transform: scale(1.1);
+//   }
+
+//   .sports-section article {
+//     position: relative;
+//   }
+
+//   .sports-section figcaption {
+//     position: absolute;
+//     bottom: 5rem;
+//     color: var(--heading-text-color);
+//     text-align: left;
+//     width: 75%;
+//     font-size: 1.5rem;
+//     padding: 10px;
+//     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+//     border: none;
+//   }
+
+//   a img,
+//   a p {
+//     display: inline-block;
+//     vertical-align: middle;
+//   }
+
+//   a img {
+//     margin-right: 10px;
+//   }
+// }
 
 @media screen and (min-width: 70em) {
   .breaking-news-section article {
