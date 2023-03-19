@@ -1,0 +1,27 @@
+.cnn-logo {
+  background: url(../images/cnn-logo.png);
+}
+
+.et-logo {
+  background: url(../images/et-canada-logo.jpeg);
+}
+
+.source-logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* RESPONSIVENESS */
+
+.tile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  padding-bottom: 15rem;
+}

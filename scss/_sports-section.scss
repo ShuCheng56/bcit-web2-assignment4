@@ -1,0 +1,67 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+.sports-section-title {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.sports-section {
+  @include media() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+  @include media($lg) {
+    flex-direction: row;
+  }
+  article {
+    position: relative;
+  }
+  figure {
+    margin: 0;
+    @include media() {
+      margin-inline: 40px;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      width: 100%;
+      transition: transform 0.2s ease-in-out;
+      border-radius: 2%;
+      @include media() {
+        height: 400px;
+        object-fit: cover;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+    figcaption {
+      position: absolute;
+      bottom: 5rem;
+      width: 75%;
+      margin: 0.5rem;
+      color: $heading-text-color;
+      text-shadow: 2px 2px 2px rgba(70, 70, 70, 0.49);
+      font-size: 1.5rem;
+      border: none;
+      text-align: left;
+    }
+  }
+  figcaption {
+    @include media() {
+      position: absolute;
+      bottom: 5rem;
+      color: $heading-text-color;
+      text-align: left;
+      width: 75%;
+      font-size: 1.5rem;
+      padding: 10px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      border: none;
+    }
+  }
+}

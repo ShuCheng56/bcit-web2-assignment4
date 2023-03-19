@@ -1,0 +1,52 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img,
+a p {
+  text-align: center;
+  vertical-align: middle;
+  @include media() {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+a img {
+  margin-right: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 ~ p {
+  @include media($lg) {
+    text-align: left;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+    margin-top: 0;
+  }
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  &--red {
+    @extend .paragraph;
+    color: red;
+  }
+}
